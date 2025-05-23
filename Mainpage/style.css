@@ -8,11 +8,22 @@
   --hue: 223;
   --bg: hsl(var(--hue), 10%, 90%);
   --fg: hsl(var(--hue), 10%, 10%);
+  --bg-main: #1E1E2F;
+  --bg-secondary: #2D2D3F;
+  --border: #3C3C4D;
+  --text-primary: #ECECEC;
+  --text-secondary: #A0A0B0;
+  --btn-primary: #7FDBDA;
+  --btn-primary-hover: #5FD0C6;
+  --accent: #FFD166;
+  --error: #FF6B6B;
+  --success: #3DDC97;
+  --hero-gradient: linear-gradient(135deg, #1E1E2F 0%, #2D2D3F 100%);
   font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
 }
 body {
-  background-color: var(--bg);
-  color: var(--fg);
+  background: var(--bg-main);
+  color: var(--text-primary);
   font: 1em/1.5 sans-serif;
   height: 100vh;
   display: grid;
@@ -114,8 +125,8 @@ body {
 }
 
 header {
-  background: #333;
-  color: #fff;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
   padding: 1rem 2rem;
 }
 
@@ -126,18 +137,25 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
 section {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 1em;
+  box-shadow: 0 2px 8px 0 var(--border);
+  margin: 1.5em 0;
   padding: 2rem;
 }
 
 footer {
-  text-align: center;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border);
   padding: 1rem;
-  background: #f4f4f4;
+  text-align: center;
 }
 /* From Uiverse.io by Li-Deheng */ 
 .loader {
