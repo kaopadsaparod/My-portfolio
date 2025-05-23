@@ -29,6 +29,8 @@ body {
   display: grid;
   place-items: center;
   transition: background-color 0.3s;
+
+
 }
 main {
   padding: 1.5em 0;
