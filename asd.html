@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Welcome Overlay -->
+  <div id="welcome-overlay" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--fg);transition:opacity 1s;">
+    <h1 style="font-size:2.2rem;animation:bounceIn 1.2s; margin-bottom:2rem; text-align:center;">Welcome to my portfolio<br>Peeranat</h1>
+    <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="hsl(193,90%,55%)" />
+          <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+        </linearGradient>
+      </defs>
+      <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16" stroke-linecap="round" />
+      <path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10" />
+    </svg>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Peeranat(Fullstack Developer)</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <img src="profile.jpg" alt="Profile" style="width:120px;border-radius:50%;margin-bottom:1rem;" />
+    <h2>Peeranat Boonplook</h2>
+    <p>Fullstack Developer skilled in HTML, CSS, JavaScript, Flutter, Python, and always eager to learn new technologies.</p>
+    <a href="#contact" class="btn">Contact Me</a> | <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate Fullstack Developer who loves building websites and applications that solve real-world problems. I am always interested in new technologies and strive to improve myself continuously.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Flutter</li>
+      <li><strong>Backend:</strong> Python, Node.js (basic)</li>
+      <li><strong>Tools:</strong> Git, VS Code, Docker</li>
+      <li><strong>Soft Skills:</strong> Teamwork, Problem Solving, Communication</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Project 1: Portfolio Website</h3>
+      <p>A personal website to showcase my profile and works, built with HTML, CSS, and JavaScript.</p>
+      <a href="#" target="_blank">View Demo</a> | <a href="#" target="_blank">View Code</a>
+    </div>
+    <div class="project">
+      <h3>Project 2: Flutter App</h3>
+      <p>A mobile app for personal task management, developed using Flutter and Firebase.</p>
+      <a href="#" target="_blank">View Demo</a> | <a href="#" target="_blank">View Code</a>
+    </div>
+    <!-- Add more projects here -->
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>2024 - Present:</strong> Freelance Fullstack Developer</li>
+      <li><strong>2023:</strong> Internship at ABC Company (Web development with Python/Flask)</li>
+      <!-- Add more experience here -->
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div style="margin-top:1rem;">
+      <a href="pqx123456789@gmail.com">Email</a> |
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/peeranat-boonplook-921b14317/" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Peeranat Boonplook. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add bounceIn animation for the welcome text
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes bounceIn {
+        0% { transform: scale(0.7); opacity: 0; }
+        60% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); }
+      }
+    `;
+    document.head.appendChild(style);
+    // Hide overlay after 2.5s
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        const overlay = document.getElementById('welcome-overlay');
+        overlay.style.opacity = 0;
+        setTimeout(() => overlay.style.display = 'none', 1000);
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
